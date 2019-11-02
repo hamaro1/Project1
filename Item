@@ -1,8 +1,8 @@
 import java.lang.*;
 /**
+ * This item class is used to create and model a basic game adventure item.
  * 
- * @author Helen Amaro and Sarah Shapard
- *
+ * @author Helen Amaro
  */
 
 public class Item {
@@ -12,6 +12,10 @@ public class Item {
 	private String type;
 	private String description;
 	
+	/**
+	 *  The constructor used to create a new Item. The constructor sets the name, type and description to null.
+	 */
+	
 	public Item()
 	{
 		name = "";
@@ -19,41 +23,86 @@ public class Item {
 		description = "";
 	}
 	
+	/**
+	 * The constructor used to construct a new Item from a name, a type, and a description.
+	 * @param name The name of the Item (according to the game system).
+	 * @param type The type of Item.
+	 * @param description A small description of item.
+	 */
+	
 	public Item(String name, String type, String description){
 		this.name = name;
 		this.type = type;
 		this.description = description;
 	}
 	
+	/**
+	 * This method returns the name of the Item.
+	 * @return The name of the Item.
+	 */
+	
 	public String getName()
 	{
 		return name;
 	}
+	
+	/**
+	 * This method sets the current name of the Item.
+	 * @param name The new name of the Item.
+	 * @return Nothing
+	 */
 	
 	public void setName(String name)
 	{
 		this.name = name;
 	}
 	
+	/**
+	 * This method returns the type of Item
+	 * @return The type of the Item.
+	 */
+	
 	public String getType()
 	{
 		return type;
 	}
+	
+	/**
+	 * This method sets the current type of the item.
+	 * @param type The new type of the Item.
+	 * @return Nothing
+	 */
 	
 	public void setType(String type)
 	{
 		this.type = type;
 	}
 	
+	/**
+	 * This method returns the current description of the Item
+	 * @return The current description of the Item.
+	 */
+	
 	public String getDescription() 
 	{
 		return description;
 	}
 	
+	/**
+	 * This method sets the present description of the Item.
+	 * @param description The updated description of the Item.
+	 * @return Nothing
+	 */
+	
 	public void setDescription(String description)
 	{
 		this.description = description;
 	}
+	
+	/**
+	 * This methods is overrides the toString() method from the Object class to build a new String. The new String 
+	 * contains the name, the type, and description of the Item.
+	 */
 	
 	@Override
 	public String toString()
@@ -62,6 +111,6 @@ public class Item {
 				+ "\n" + "     Type: " + type + "\n" + "     Description: " + description; 
 		
 		return s;
-	}
+	}	
 	
 }
